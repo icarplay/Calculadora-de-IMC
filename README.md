@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # calculadora_imc
 
 A new Flutter application.
@@ -18,4 +17,3 @@ samples, guidance on mobile development, and a full API reference.
 =======
 # Calculadora-de-IMC
 Quick-Start feito para melhorar entendimento de Flutter
->>>>>>> 9b13a5b37cf7f5e958def6b044168f0f77727e5d
