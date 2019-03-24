@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:calculadora_imc/home_page.dart';
 import 'package:calculadora_imc/add_page.dart';
+import 'package:calculadora_imc/people_page.dart';
 
 import 'package:path_provider/path_provider.dart';
 import 'dart:async';
@@ -23,9 +24,7 @@ class _HomeState extends State<Home> {
   int currentTabIndex = 1;
 
   List<Widget> tabs = [
-    Container(
-      child: Text("0"),
-    ),
+    PeoplePage(),
     HomePage(),
     AddPeoplePage()
   ];

@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
     _readData().then((data) {
       setState(() {
         _toDoList = json.decode(data);
-        print(_toDoList);
         _peopleItems = _getDropdownItems();
       });
     });
@@ -40,7 +39,6 @@ class _HomePageState extends State<HomePage> {
     List<DropdownMenuItem<String>> auxItems = List();
 
     for (Map<String, dynamic> item in _toDoList['People']) {
-      print(item);
       auxItems.add(
         DropdownMenuItem(
           value: item['id'],
@@ -60,11 +58,9 @@ class _HomePageState extends State<HomePage> {
       newToDo["id"] = DateTime.now().millisecondsSinceEpoch.toString();
       newToDo["peso"] = weightController.text;
       newToDo["altura"] = heightController.text;
-      newToDo["imc"] = imc;
+      newToDo["imc"] = imc.toStringAsPrecision(2);
       newToDo["person"] = _currentPeople;
       newToDo["data"] = DateTime.now().toIso8601String();
-
-      print(newToDo);
 
       setState(() {
         if (_toDoList.containsKey('IMC')) {
